@@ -11,6 +11,7 @@
     thread_list = []
     for i in  range(1,1000,50):
         downloadthread = threading.Thread(target=download,args=(i,i+50))
+        downloadthread.start()
         thread_list.append(downloadthread)
   ```
     定义下载漫画函数
